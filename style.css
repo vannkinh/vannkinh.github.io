@@ -705,6 +705,11 @@ img {
     color: var(--navy);
 }
 
+.location-row {
+    display: block;
+    margin-top: 3px;
+}
+
 
 /* ==========================================================
    RESEARCH
