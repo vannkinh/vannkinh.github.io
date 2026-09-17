@@ -2,475 +2,26 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Vannkinh Nom | Academic Homepage</title>
+    <title>Vannkinh Nom | Computer Vision Researcher</title>
 
-  <meta name="description"
-        content="Academic homepage of Vannkinh Nom, Ph.D. candidate in Computer Science at La Rochelle Université, L3i Laboratory. Research in scene text spotting, OCR, computer vision, document image analysis, and low-resource languages.">
+    <meta name="description"
+          content="Academic homepage of Vannkinh Nom. Research in computer vision, scene text spotting, OCR, document image analysis, and low-resource languages.">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <style>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
 
-    /* =========================================================
-       BASIC SETTINGS
-       ========================================================= */
-
-    :root {
-      --primary: #073f3d;
-      --primary-light: #155e59;
-      --background: #f6f3ed;
-      --card: #ffffff;
-      --soft: #eef1ed;
-      --text: #252525;
-      --muted: #606060;
-      --border: #d9dedb;
-      --shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Inter", Arial, sans-serif;
-      background: var(--background);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--primary-light);
-    }
-
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
-
-    .navbar {
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1240px;
-      margin: auto;
-      padding: 0 25px;
-      min-height: 70px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-weight: 600;
-      color: var(--text);
-      transition: 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .mobile-menu {
-      display: none;
-      font-size: 25px;
-      cursor: pointer;
-    }
-
-    /* =========================================================
-       PAGE LAYOUT
-       ========================================================= */
-
-    .page-container {
-      max-width: 1240px;
-      margin: 45px auto;
-      padding: 0 25px;
-
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 45px;
-    }
-
-    /* =========================================================
-       SIDEBAR
-       ========================================================= */
-
-    .sidebar {
-      padding-top: 5px;
-    }
-
-    .profile-photo {
-      width: 165px;
-      height: 165px;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 20px;
-
-      border: 5px solid white;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-    }
-
-    .sidebar h2 {
-      font-size: 21px;
-      margin-bottom: 7px;
-    }
-
-    .position {
-      font-size: 14px;
-      color: var(--text);
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-
-    .sidebar-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin: 11px 0;
-      font-size: 14px;
-    }
-
-    .sidebar-item i {
-      width: 17px;
-      margin-top: 4px;
-      color: var(--primary);
-    }
-
-    .sidebar-item a {
-      color: var(--text);
-    }
-
-    .sidebar-item a:hover {
-      color: var(--primary);
-    }
-
-    /* =========================================================
-       MAIN CONTENT
-       ========================================================= */
-
-    .main-content {
-      background: var(--card);
-      border-radius: 18px;
-      padding: 35px;
-      box-shadow: var(--shadow);
-    }
-
-    .welcome {
-      font-family: "Libre Baskerville", serif;
-      color: var(--primary);
-      font-size: 42px;
-      margin-bottom: 25px;
-      line-height: 1.25;
-    }
-
-    /* =========================================================
-       HERO
-       ========================================================= */
-
-    .hero {
-      padding: 34px;
-      border-radius: 17px;
-      border: 1px solid var(--border);
-
-      background:
-        linear-gradient(
-          135deg,
-          #eef2ef 0%,
-          #f7f2ed 100%
-        );
-
-      display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 35px;
-      align-items: center;
-
-      margin-bottom: 42px;
-    }
-
-    .hero h1 {
-      font-family: "Libre Baskerville", serif;
-      color: var(--primary);
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .hero-subtitle {
-      font-size: 18px;
-      color: #4c4c4c;
-      margin-bottom: 20px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-    }
-
-    .tag {
-      background: #dfe7e3;
-      border: 1px solid #c8d2ce;
-      color: var(--primary);
-      padding: 7px 13px;
-      border-radius: 22px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    /* =========================================================
-       STATISTICS
-       ========================================================= */
-
-    .stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
-    }
-
-    .stat-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      padding: 20px;
-      transition: 0.25s;
-    }
-
-    .stat-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
-    }
-
-    .stat-number {
-      font-size: 25px;
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    .stat-label {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* =========================================================
-       SECTIONS
-       ========================================================= */
-
-    .section {
-      margin-top: 38px;
-    }
-
-    .section h2 {
-      font-family: "Libre Baskerville", serif;
-      font-size: 21px;
-      margin-bottom: 15px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #e8e8e8;
-    }
-
-    .section p {
-      font-size: 16px;
-      margin-bottom: 14px;
-    }
-
-    /* =========================================================
-       RESEARCH INTERESTS
-       ========================================================= */
-
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .research-card {
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      padding: 20px;
-      background: #fafafa;
-      transition: 0.25s;
-    }
-
-    .research-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 7px 18px rgba(0,0,0,0.06);
-    }
-
-    .research-card i {
-      font-size: 22px;
-      color: var(--primary);
-      margin-bottom: 12px;
-    }
-
-    .research-card h3 {
-      font-size: 15px;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-
-    .research-card p {
-      font-size: 13px;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    /* =========================================================
-       FEATURED WORK
-       ========================================================= */
-
-    .work-list {
-      margin-top: 18px;
-    }
-
-    .work-item {
-      padding: 17px 0;
-      border-bottom: 1px solid #eeeeee;
-    }
-
-    .work-item:last-child {
-      border-bottom: none;
-    }
-
-    .work-item h3 {
-      font-size: 16px;
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-
-    .work-item p {
-      font-size: 14px;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
-
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* =========================================================
-       RESPONSIVE DESIGN
-       ========================================================= */
-
-    @media (max-width: 900px) {
-
-      .page-container {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        text-align: center;
-      }
-
-      .sidebar-item {
-        justify-content: center;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-
-        background: white;
-        padding: 20px;
-
-        flex-direction: column;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .mobile-menu {
-        display: block;
-      }
-
-      .main-content {
-        padding: 22px;
-      }
-
-      .welcome {
-        font-size: 32px;
-      }
-
-      .hero {
-        padding: 25px;
-      }
-
-      .hero h1 {
-        font-size: 30px;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-  </style>
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 
@@ -478,586 +29,985 @@
 
 <!-- =========================================================
      NAVIGATION
-     ========================================================= -->
+========================================================= -->
 
-<nav class="navbar">
+<header class="header">
 
-  <div class="nav-container">
+    <nav class="navbar container">
 
-    <a href="index.html" class="logo">
-      Vannkinh Nom
-    </a>
+        <a href="#" class="brand">
+            VN<span>.</span>
+        </a>
 
-    <ul class="nav-links" id="navLinks">
+        <ul class="nav-links">
 
-      <li>
-        <a href="index.html">Home</a>
-      </li>
+            <li><a href="#about">About</a></li>
 
-      <li>
-        <a href="publications.html">Publications</a>
-      </li>
+            <li><a href="#research">Research</a></li>
 
-      <li>
-        <a href="research.html">Research</a>
-      </li>
+            <li><a href="#work">Projects</a></li>
 
-      <li>
-        <a href="datasets.html">Datasets</a>
-      </li>
+            <li><a href="#publications">Publications</a></li>
 
-      <li>
-        <a href="teaching.html">Teaching</a>
-      </li>
+            <li><a href="#teaching">Teaching</a></li>
 
-      <li>
-        <a href="cv.html">CV</a>
-      </li>
+            <li>
+                <a href="cv.pdf" class="nav-cv">
+                    CV
+                </a>
+            </li>
 
-    </ul>
+        </ul>
 
-    <div class="mobile-menu" onclick="toggleMenu()">
-      <i class="fa-solid fa-bars"></i>
-    </div>
+        <button class="menu-button" id="menuButton"
+                aria-label="Open navigation menu">
 
-  </div>
+            <i class="fa-solid fa-bars"></i>
 
-</nav>
+        </button>
+
+    </nav>
+
+</header>
+
+
+<main>
 
 
 <!-- =========================================================
-     PAGE
-     ========================================================= -->
+     HERO
+========================================================= -->
 
-<div class="page-container">
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <!-- LEFT -->
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                COMPUTER VISION · DOCUMENT AI · OCR
+            </p>
+
+            <h1>
+                Hi, I'm
+                <span>Vannkinh Nom.</span>
+            </h1>
+
+            <h2>
+                I work on making machines understand
+                text in complex visual environments.
+            </h2>
+
+            <p class="hero-description">
+
+                I am a Ph.D. candidate in Computer Science at
+                <strong>La Rochelle Université</strong>,
+                L3i Laboratory, France.
+
+                My research focuses on scene text detection and
+                recognition, end-to-end text spotting, document
+                image analysis, and low-resource writing systems,
+                with particular emphasis on Khmer script.
+
+            </p>
 
 
-  <!-- =======================================================
-       LEFT SIDEBAR
-       ======================================================= -->
+            <div class="hero-buttons">
 
-  <aside class="sidebar">
+                <a href="#research" class="button primary-button">
 
-    <img
-      src="profile.jpg"
-      alt="Vannkinh Nom"
-      class="profile-photo"
-    >
+                    Explore my research
 
-    <h2>Vannkinh Nom</h2>
+                    <i class="fa-solid fa-arrow-right"></i>
 
-    <p class="position">
-      Ph.D. Candidate in Computer Science
-    </p>
+                </a>
+
+                <a href="#publications"
+                   class="button secondary-button">
+
+                    Publications
+
+                </a>
+
+            </div>
 
 
-    <div class="sidebar-item">
+            <div class="social-links">
 
-      <i class="fa-solid fa-location-dot"></i>
+                <!-- Replace YOUR-EMAIL -->
 
-      <span>
-        La Rochelle, France
-      </span>
+                <a href="mailto:YOUR-EMAIL"
+                   aria-label="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+                <a href="https://github.com/vannkinh"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <!-- Replace # -->
+
+                <a href="#"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Google Scholar">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                </a>
+
+
+                <!-- Replace # -->
+
+                <a href="#"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <!-- Replace # -->
+
+                <a href="#"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="ORCID">
+
+                    <i class="fa-brands fa-orcid"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT / PHOTO -->
+
+        <div class="hero-visual">
+
+            <div class="photo-shape">
+
+                <img src="images/profile.jpg"
+                     alt="Vannkinh Nom">
+
+            </div>
+
+
+            <div class="floating-card location-card">
+
+                <span class="floating-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </span>
+
+                <div>
+
+                    <small>Based at</small>
+
+                    <strong>
+                        La Rochelle, France
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-card research-card">
+
+                <span class="floating-icon">
+
+                    <i class="fa-solid fa-language"></i>
+
+                </span>
+
+                <div>
+
+                    <small>Research focus</small>
+
+                    <strong>
+                        Khmer & Low-Resource Scripts
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-
-    <div class="sidebar-item">
-
-      <i class="fa-solid fa-building-columns"></i>
-
-      <span>
-        L3i Laboratory<br>
-        La Rochelle Université
-      </span>
-
-    </div>
+</section>
 
 
-    <!-- Replace with your preferred public email -->
+<!-- =========================================================
+     QUICK INFO
+========================================================= -->
 
-    <div class="sidebar-item">
+<section class="quick-info">
 
-      <i class="fa-solid fa-envelope"></i>
+    <div class="container quick-grid">
 
-      <a href="mailto:YOUR-EMAIL">
-        Email
-      </a>
+        <div class="quick-item">
 
-    </div>
+            <span>01</span>
 
+            <div>
 
-    <div class="sidebar-item">
+                <strong>Scene Text</strong>
 
-      <i class="fa-brands fa-github"></i>
+                <p>
+                    Detection, recognition & spotting
+                </p>
 
-      <a href="https://github.com/vannkinh"
-         target="_blank"
-         rel="noopener noreferrer">
-        GitHub
-      </a>
+            </div>
 
-    </div>
-
-
-    <!-- Replace # with your Google Scholar URL -->
-
-    <div class="sidebar-item">
-
-      <i class="fa-solid fa-graduation-cap"></i>
-
-      <a href="#"
-         target="_blank"
-         rel="noopener noreferrer">
-        Google Scholar
-      </a>
-
-    </div>
+        </div>
 
 
-    <!-- Replace # with your LinkedIn URL -->
+        <div class="quick-item">
 
-    <div class="sidebar-item">
+            <span>02</span>
 
-      <i class="fa-brands fa-linkedin"></i>
+            <div>
 
-      <a href="#"
-         target="_blank"
-         rel="noopener noreferrer">
-        LinkedIn
-      </a>
+                <strong>Low-Resource Scripts</strong>
 
-    </div>
+                <p>
+                    Khmer & cross-lingual research
+                </p>
+
+            </div>
+
+        </div>
 
 
-    <!-- Replace # with your ORCID URL -->
+        <div class="quick-item">
 
-    <div class="sidebar-item">
+            <span>03</span>
 
-      <i class="fa-brands fa-orcid"></i>
+            <div>
 
-      <a href="#"
-         target="_blank"
-         rel="noopener noreferrer">
-        ORCID
-      </a>
+                <strong>Document AI</strong>
+
+                <p>
+                    Visual text understanding
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-item">
+
+            <span>04</span>
+
+            <div>
+
+                <strong>Deep Learning</strong>
+
+                <p>
+                    Vision & Transformer models
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
+</section>
 
-    <!-- Replace # with your ResearchGate URL -->
 
-    <div class="sidebar-item">
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
-      <i class="fa-brands fa-researchgate"></i>
+<section class="section about" id="about">
 
-      <a href="#"
-         target="_blank"
-         rel="noopener noreferrer">
-        ResearchGate
-      </a>
+    <div class="container">
+
+        <div class="section-number">
+            01 / ABOUT
+        </div>
+
+
+        <div class="about-grid">
+
+            <div>
+
+                <h2 class="section-title">
+                    Researching visual text
+                    <em>beyond high-resource languages.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    I am a Ph.D. candidate in Computer Science
+                    at La Rochelle Université, working within
+                    the L3i Laboratory in France.
+                </p>
+
+                <p>
+                    My doctoral research investigates
+                    <strong>end-to-end scene text spotting for
+                    Khmer script</strong> as a representative
+                    low-resource and complex writing system.
+                </p>
+
+                <p>
+                    My work spans dataset development,
+                    scene text detection, text recognition,
+                    end-to-end text spotting, and cross-lingual
+                    generalization. I am particularly interested
+                    in understanding how computer vision models
+                    can better support languages and writing
+                    systems for which annotated resources remain
+                    limited.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </aside>
+</section>
 
 
-  <!-- =======================================================
-       MAIN CONTENT
-       ======================================================= -->
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
 
-  <main class="main-content">
+<section class="section research-section" id="research">
+
+    <div class="container">
+
+        <div class="section-number">
+            02 / RESEARCH
+        </div>
+
+        <div class="section-heading">
+
+            <h2>
+                Research Areas
+            </h2>
+
+            <p>
+                My research connects computer vision,
+                language understanding, and document analysis.
+            </p>
+
+        </div>
 
 
-    <h1 class="welcome">
-      Hello There, I'm Vannkinh!
-    </h1>
+        <div class="research-list">
 
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
+            <article class="research-item">
 
-    <section class="hero">
+                <span class="research-number">
+                    01
+                </span>
 
-      <div>
+                <div>
 
-        <h1>Vannkinh Nom</h1>
+                    <h3>
+                        End-to-End Scene Text Spotting
+                    </h3>
 
-        <p class="hero-subtitle">
-          Ph.D. Candidate in Computer Science at
-          L3i Laboratory, La Rochelle Université, France.
+                    <p>
+                        Developing systems that jointly localize
+                        and recognize text appearing in
+                        unconstrained natural scenes.
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-dots"></i>
+
+            </article>
+
+
+            <article class="research-item">
+
+                <span class="research-number">
+                    02
+                </span>
+
+                <div>
+
+                    <h3>
+                        Optical Character Recognition
+                    </h3>
+
+                    <p>
+                        Investigating recognition techniques
+                        for Khmer and other complex writing
+                        systems.
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-language"></i>
+
+            </article>
+
+
+            <article class="research-item">
+
+                <span class="research-number">
+                    03
+                </span>
+
+                <div>
+
+                    <h3>
+                        Low-Resource Languages
+                    </h3>
+
+                    <p>
+                        Building datasets, benchmarks, and
+                        learning strategies for languages with
+                        limited annotated data.
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-earth-asia"></i>
+
+            </article>
+
+
+            <article class="research-item">
+
+                <span class="research-number">
+                    04
+                </span>
+
+                <div>
+
+                    <h3>
+                        Document Image Analysis
+                    </h3>
+
+                    <p>
+                        Applying computer vision and deep
+                        learning to extract and understand
+                        textual information from documents.
+                    </p>
+
+                </div>
+
+                <i class="fa-regular fa-file-lines"></i>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURED WORK
+========================================================= -->
+
+<section class="section" id="work">
+
+    <div class="container">
+
+        <div class="section-number">
+            03 / FEATURED WORK
+        </div>
+
+
+        <div class="section-heading">
+
+            <h2>
+                Selected Research
+            </h2>
+
+            <p>
+                Datasets and methods developed during
+                my doctoral research.
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- KHMERST -->
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-type">
+                        DATASET
+                    </span>
+
+                    <span class="project-year">
+                        2024
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    KhmerST
+                </h3>
+
+                <p>
+                    A Khmer scene-text dataset designed to
+                    support research on text detection and
+                    recognition in natural environments.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>Khmer</span>
+
+                    <span>Scene Text</span>
+
+                    <span>Detection</span>
+
+                    <span>Recognition</span>
+
+                </div>
+
+
+                <!-- Add paper/dataset links later -->
+
+                <a href="#publications"
+                   class="project-link">
+
+                    Learn more
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- WILDKHMERST -->
+
+            <article class="project-card featured">
+
+                <div class="project-top">
+
+                    <span class="project-type">
+                        DATASET
+                    </span>
+
+                    <span class="project-year">
+                        2025
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    WildKhmerST
+                </h3>
+
+                <p>
+                    A large-scale scene-text dataset for
+                    studying Khmer text under diverse
+                    real-world conditions and evaluating
+                    cross-dataset generalization.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>10K Images</span>
+
+                    <span>Khmer</span>
+
+                    <span>OCR</span>
+
+                    <span>Benchmark</span>
+
+                </div>
+
+
+                <a href="#publications"
+                   class="project-link">
+
+                    Learn more
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- SWINTEXTSPOTTER KH -->
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-type">
+                        MODEL
+                    </span>
+
+                    <span class="project-year">
+                        Research
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    SwinTextSpotter-KH
+                </h3>
+
+                <p>
+                    An end-to-end scene text spotting approach
+                    designed for Khmer and other low-resource
+                    complex writing systems.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>Transformer</span>
+
+                    <span>Text Spotting</span>
+
+                    <span>Cross-Lingual</span>
+
+                </div>
+
+
+                <a href="#publications"
+                   class="project-link">
+
+                    Learn more
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section class="section publications-section"
+         id="publications">
+
+    <div class="container">
+
+        <div class="section-number">
+            04 / PUBLICATIONS
+        </div>
+
+
+        <div class="section-heading publication-heading">
+
+            <div>
+
+                <h2>
+                    Selected Publications
+                </h2>
+
+                <p>
+                    Selected peer-reviewed research on
+                    Khmer scene text understanding.
+                </p>
+
+            </div>
+
+
+            <a href="publications.html"
+               class="text-link">
+
+                View all publications
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="publication-list">
+
+
+            <article class="publication">
+
+                <div class="pub-year">
+                    2025
+                </div>
+
+                <div class="pub-content">
+
+                    <span class="venue">
+                        ICDAR 2025
+                    </span>
+
+                    <h3>
+                        WildKhmerST
+                    </h3>
+
+                    <p>
+                        Research on Khmer scene text
+                        detection and recognition in
+                        challenging real-world environments.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="publication">
+
+                <div class="pub-year">
+                    2025
+                </div>
+
+                <div class="pub-content">
+
+                    <span class="venue">
+                        ICDAR 2025 WORKSHOPS
+                    </span>
+
+                    <h3>
+                        Cross-Lingual Learning for
+                        Low-Resource Scene Text
+                    </h3>
+
+                    <p>
+                        Exploring cross-lingual learning and
+                        generalization for low-resource
+                        writing systems.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="publication">
+
+                <div class="pub-year">
+                    2024
+                </div>
+
+                <div class="pub-content">
+
+                    <span class="venue">
+                        ACCV 2024
+                    </span>
+
+                    <h3>
+                        KhmerST
+                    </h3>
+
+                    <p>
+                        A dataset and benchmark for Khmer
+                        text detection and recognition in
+                        natural scenes.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TEACHING
+========================================================= -->
+
+<section class="section" id="teaching">
+
+    <div class="container">
+
+        <div class="section-number">
+            05 / TEACHING
+        </div>
+
+
+        <div class="teaching-box">
+
+            <div>
+
+                <p class="small-title">
+                    TEACHING & SUPERVISION
+                </p>
+
+                <h2>
+                    Connecting research
+                    with education.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Alongside my research, I have experience
+                    teaching and supervising Computer Science
+                    students at the Cambodia Academy of
+                    Digital Technology.
+                </p>
+
+                <p>
+                    My teaching interests include computer
+                    vision, artificial intelligence, deep
+                    learning, programming, and related areas
+                    of Computer Science.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact-section">
+
+    <div class="container contact-content">
+
+        <p>
+            LET'S CONNECT
         </p>
 
+        <h2>
+            Interested in scene text,
+            OCR, or low-resource languages?
+        </h2>
 
-        <div class="tags">
+        <a href="mailto:YOUR-EMAIL"
+           class="contact-link">
 
-          <span class="tag">
-            Computer Vision
-          </span>
+            Get in touch
 
-          <span class="tag">
-            Scene Text Spotting
-          </span>
+            <i class="fa-solid fa-arrow-right"></i>
 
-          <span class="tag">
-            OCR
-          </span>
+        </a>
 
-          <span class="tag">
-            Document AI
-          </span>
+    </div>
 
-          <span class="tag">
-            Low-Resource Languages
-          </span>
+</section>
 
-        </div>
 
-      </div>
-
-
-      <!-- Update these values whenever needed -->
-
-      <div class="stats">
-
-        <div class="stat-card">
-
-          <div class="stat-number">
-            3+
-          </div>
-
-          <div class="stat-label">
-            Peer-reviewed publications
-          </div>
-
-        </div>
-
-
-        <div class="stat-card">
-
-          <div class="stat-number">
-            2
-          </div>
-
-          <div class="stat-label">
-            Khmer scene-text datasets
-          </div>
-
-        </div>
-
-
-        <div class="stat-card">
-
-          <div class="stat-number">
-            Ph.D.
-          </div>
-
-          <div class="stat-label">
-            Computer Science
-          </div>
-
-        </div>
-
-
-        <div class="stat-card">
-
-          <div class="stat-number">
-            Khmer
-          </div>
-
-          <div class="stat-label">
-            Primary low-resource script
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         BACKGROUND
-         ===================================================== -->
-
-    <section class="section">
-
-      <h2>My Background</h2>
-
-      <p>
-        I am a Ph.D. candidate in Computer Science at
-        <strong>La Rochelle Université</strong>, working within the
-        <strong>L3i Laboratory</strong> in France.
-        My research lies at the intersection of computer vision,
-        document image analysis, optical character recognition,
-        and scene text understanding.
-      </p>
-
-      <p>
-        Before starting my Ph.D., I completed my master's degree
-        with research on word spotting in Khmer palm leaf manuscript
-        documents at the Institute of Technology of Cambodia, where
-        I also earned my engineering degree in Computer Science.
-      </p>
-
-    </section>
-
-
-    <!-- =====================================================
-         CURRENT RESEARCH
-         ===================================================== -->
-
-    <section class="section">
-
-      <h2>Current Research</h2>
-
-      <p>
-        My Ph.D. research focuses on
-        <strong>end-to-end scene text spotting for Khmer script</strong>
-        as a representative low-resource and complex writing system.
-        I investigate the challenges involved in detecting and
-        recognizing Khmer text in natural scenes and explore how
-        modern deep learning approaches can be adapted to scripts
-        for which large-scale annotated resources are limited.
-      </p>
-
-      <p>
-        My work includes the development of Khmer scene-text datasets,
-        detection and recognition benchmarks, end-to-end text spotting
-        approaches, and cross-lingual experiments designed to study
-        generalization across low-resource languages.
-      </p>
-
-    </section>
-
-
-    <!-- =====================================================
-         RESEARCH INTERESTS
-         ===================================================== -->
-
-    <section class="section">
-
-      <h2>Research Interests</h2>
-
-      <div class="research-grid">
-
-
-        <div class="research-card">
-
-          <i class="fa-solid fa-eye"></i>
-
-          <h3>
-            Scene Text Spotting
-          </h3>
-
-          <p>
-            End-to-end localization and recognition
-            of text appearing in natural scenes.
-          </p>
-
-        </div>
-
-
-        <div class="research-card">
-
-          <i class="fa-solid fa-language"></i>
-
-          <h3>
-            Optical Character Recognition
-          </h3>
-
-          <p>
-            Recognition methods for Khmer and
-            other complex writing systems.
-          </p>
-
-        </div>
-
-
-        <div class="research-card">
-
-          <i class="fa-solid fa-camera"></i>
-
-          <h3>
-            Computer Vision
-          </h3>
-
-          <p>
-            Deep learning approaches for visual
-            recognition and document understanding.
-          </p>
-
-        </div>
-
-
-        <div class="research-card">
-
-          <i class="fa-solid fa-file-lines"></i>
-
-          <h3>
-            Document Image Analysis
-          </h3>
-
-          <p>
-            Analysis and understanding of textual
-            information in document images.
-          </p>
-
-        </div>
-
-
-        <div class="research-card">
-
-          <i class="fa-solid fa-globe"></i>
-
-          <h3>
-            Low-Resource Languages
-          </h3>
-
-          <p>
-            Datasets, benchmarks, and models for
-            languages with limited annotated resources.
-          </p>
-
-        </div>
-
-
-        <div class="research-card">
-
-          <i class="fa-solid fa-brain"></i>
-
-          <h3>
-            Deep Learning
-          </h3>
-
-          <p>
-            Transformer and neural-network architectures
-            for multilingual text understanding.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         FEATURED RESEARCH
-         ===================================================== -->
-
-    <section class="section">
-
-      <h2>Featured Research</h2>
-
-
-      <div class="work-list">
-
-
-        <div class="work-item">
-
-          <h3>
-            KhmerST
-          </h3>
-
-          <p>
-            A scene-text dataset and benchmark designed to support
-            research on Khmer text detection and recognition in
-            natural environments.
-          </p>
-
-        </div>
-
-
-        <div class="work-item">
-
-          <h3>
-            WildKhmerST
-          </h3>
-
-          <p>
-            A large-scale Khmer scene-text dataset developed to
-            investigate text detection, recognition, and
-            cross-dataset generalization under challenging
-            real-world conditions.
-          </p>
-
-        </div>
-
-
-        <div class="work-item">
-
-          <h3>
-            SwinTextSpotter-KH
-          </h3>
-
-          <p>
-            An end-to-end scene text spotting approach designed
-            to improve recognition of Khmer and other
-            low-resource complex scripts.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         TEACHING
-         ===================================================== -->
-
-    <section class="section">
-
-      <h2>Teaching & Supervision</h2>
-
-      <p>
-        In addition to my research activities, I have experience
-        teaching and supervising Computer Science students at the
-        Cambodia Academy of Digital Technology. My teaching interests
-        include computer vision, deep learning, artificial intelligence,
-        programming, and related areas of Computer Science.
-      </p>
-
-    </section>
-
-
-  </main>
-
-</div>
+</main>
 
 
 <!-- =========================================================
      FOOTER
-     ========================================================= -->
+========================================================= -->
 
 <footer>
 
-  © <span id="year"></span> Vannkinh Nom.
-  Academic homepage hosted with GitHub Pages.
+    <div class="container footer-content">
+
+        <div>
+
+            <strong>
+                Vannkinh Nom
+            </strong>
+
+            <p>
+                Computer Vision · Document AI · OCR
+            </p>
+
+        </div>
+
+
+        <p>
+            © <span id="year"></span> Vannkinh Nom
+        </p>
+
+
+        <a href="#">
+            Back to top ↑
+        </a>
+
+    </div>
 
 </footer>
 
 
 <!-- =========================================================
      JAVASCRIPT
-     ========================================================= -->
+========================================================= -->
 
 <script>
 
-  function toggleMenu() {
-    document
-      .getElementById("navLinks")
-      .classList
-      .toggle("active");
-  }
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const navLinks =
+        document.querySelector(".nav-links");
 
 
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+    menuButton.addEventListener("click", () => {
+
+        navLinks.classList.toggle("show");
+
+    });
+
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
 
 </script>
 
